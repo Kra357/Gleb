@@ -243,8 +243,10 @@ body {
   }
 
   .run p {
+    width: 100%;
     font-size: 7vw;
     animation-duration: 8s;
+    min-width: max-content;
   }
 
   .morning button {
@@ -293,6 +295,7 @@ body {
 
   .run p {
     font-size: 5vw;
+    min-width: max-content;
   }
 
   .morning {
