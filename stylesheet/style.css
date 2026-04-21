@@ -27,7 +27,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ========== БЕГУЩАЯ СТРОКА ========== */
 .run {
   width: 100%;
   height: 6vw;
@@ -58,7 +57,6 @@ body {
   }
 }
 
-/* ========== БЛОК С КНОПКОЙ ========== */
 .morning {
   width: 100%;
   min-height: 7vw;
@@ -107,7 +105,6 @@ body {
   animation: none;
 }
 
-/* ========== ВСПЛЫВАЮЩИЕ ФОТО ========== */
 .photo-container {
   position: fixed;
   width: 20vw;
@@ -143,7 +140,6 @@ body {
   }
 }
 
-/* ========== ТЕКСТ "ОТ КИРЫ ГЛЕБУ" ========== */
 .by {
   text-align: center;
   padding: 2vw;
@@ -160,7 +156,6 @@ body {
   margin: 0;
 }
 
-/* ========== МОБИЛЬНАЯ АДАПТАЦИЯ (до 768px) ========== */
 @media (max-width: 768px) {
   body {
     height: auto;
@@ -242,7 +237,6 @@ body {
   }
 }
 
-/* ========== ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ (до 480px) ========== */
 @media (max-width: 480px) {
   .run {
     height: 15vw;
@@ -269,7 +263,6 @@ body {
   }
 }
 
-/* ========== ДЛЯ ПЛАНШЕТОВ (768px - 1024px) ========== */
 @media (min-width: 769px) and (max-width: 1024px) {
   .morning button {
     font-size: 3vw;
@@ -289,7 +282,6 @@ body {
   }
 }
 
-/* ========== ДЛЯ ЛАНДШАФТНОЙ ОРИЕНТАЦИИ НА МОБИЛКЕ ========== */
 @media (max-width: 768px) and (orientation: landscape) {
   body {
     min-height: auto;
@@ -319,4 +311,29 @@ body {
   .photo-container {
     width: 35vw;
   }
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  position: relative !important;
+}
+
+* {
+  max-width: 100%;
+}
+
+.run {
+  overflow-x: hidden !important;
+}
+
+.run p {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.photo-container {
+  max-width: 90vw;
 }
