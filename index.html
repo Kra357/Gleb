@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>Люблю Глеба</title>
     <link rel="stylesheet" href="stylesheet/style.css" />
-    <script src="script.js" defer></script>
+    <link rel="icon" type="img" href="img/♡.png"
   </head>
 
   <body>
@@ -15,9 +18,39 @@
     <div class="morning">
       <button>нажми сюда</button>
     </div>
-    <div class="photo-container"><img src="img/Group 7.jpg" alt="" /></div>
+    <div class="lev"></div>
+
     <div class="by">
-      <p>От Киры <span> Глебу</span></p>
+      <p>От Киры Глебу</p>
     </div>
+
+    <script>
+      function showPhoto() {
+        const photo = document.createElement("img");
+        photo.src = "img/Group 7.jpg";
+        photo.className = "photo-container"; // ВАЖНО: используем photo-container
+
+        const randomX = Math.random() * (window.innerWidth - 200);
+        const randomY = Math.random() * (window.innerHeight - 200);
+
+        photo.style.left = randomX + "px";
+        photo.style.top = randomY + "px";
+
+        document.body.appendChild(photo);
+
+        setTimeout(() => {
+          photo.remove();
+        }, 2000);
+      }
+
+      const button = document.querySelector(".morning button");
+
+      if (button) {
+        button.addEventListener("click", function (event) {
+          event.stopPropagation();
+          showPhoto();
+        });
+      }
+    </script>
   </body>
 </html>
